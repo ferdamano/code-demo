@@ -1,3 +1,18 @@
+:root {
+  /* colors  */
+  --orange: #FFB067;
+  --rose: #FFE9E4;
+  --coral: #FF7077;
+  --cyan: #ACEEF3;
+  --light-grey: #f6f5f5;
+  --grey: #D8D8D8;
+
+  /* z-index */
+  --subject: 99;
+  --main: 1;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +26,104 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.section {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background-color: var(--grey);
+}
+
+.section:nth-of-type(odd) {
+  background-color: var(--light-grey);
+}
+
+.activity-row {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+@media only screen and (min-width: 768px) {
+  .activity-container {
+    height: 400px;
+  }
+}
+
+.left-pane {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  z-index: var(--subject);
+}
+
+.exec-col {
+  width: 314px;
+  height: 277px;
+}
+
+.resizing {
+  background-color: var(--rose);
+  box-shadow: 0 0 20px -10px hsl(5, 100%, 65%);
+  width: 300px;
+  resize: both;
+  overflow: hidden;
+}
+
+.right-pane {
+}
+
+
+/* tabs */
+.right-pane > .react-tabs {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  justify-self: end;
+}
+
+ul.react-tabs__tab-list {
+  display: grid;
+  width: 50%;
+  grid-template-columns: 1fr 1fr;
+  justify-self: end;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+ul.react-tabs__tab-list > li.react-tabs__tab{
+  background-color: var(--grey);
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+ul.react-tabs__tab-list > li.react-tabs__tab:hover{
+  cursor: pointer;
+}
+
+ul.react-tabs__tab-list > li.react-tabs__tab--selected{
+  background-color: white;
+  border: 1px solid var(--orange);
+  border-bottom: none;
+  z-index: var(--main);
+  position: relative;
+  bottom: -1px;
+}
+
+/* */
+iframe {
+  z-index: var(--subject);
+}
+
+.code-demo-wrapper {
+  background-color: white;
+  border: 1px solid var(--orange);
+  font-size: 1.35rem;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  padding-right: 0;
+}
+
