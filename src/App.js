@@ -5,8 +5,18 @@ import Editor from './components/Editor';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 function App() {
-  const [html, setHtml] = useState('');
-  const [css, setCss] = useState('');
+  const [html, setHtml] = useState(`
+  <div class="parent" >
+    <div class="box" contenteditable>
+      &#128516
+  </div>
+  `);
+  const [css, setCss] = useState(`
+  .parent {
+    display: grid;
+    place-items: center;
+  }
+  `);
 
   const srcDoc = `
     <html>

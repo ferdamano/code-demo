@@ -1,35 +1,32 @@
 :root {
   /* colors  */
-  --orange: #FFB067;
-  --rose: #FFE9E4;
-  --coral: #FF7077;
-  --cyan: #ACEEF3;
+  --orange: #ffb067;
+  --rose: #ffe9e4;
+  --coral: #ff7077;
+  --cyan: #aceef3;
   --light-grey: #f6f5f5;
-  --grey: #D8D8D8;
+  --grey: #d8d8d8;
 
   /* z-index */
   --subject: 99;
   --main: 1;
 }
 
-
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .section {
-  max-width: 1260px;
-  margin: 0 auto;
   padding: 4rem 2rem;
   background-color: var(--grey);
 }
@@ -42,6 +39,8 @@ code {
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  max-width: 1260px;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -73,7 +72,6 @@ code {
 .right-pane {
 }
 
-
 /* tabs */
 .right-pane > .react-tabs {
   display: grid;
@@ -91,18 +89,18 @@ ul.react-tabs__tab-list {
   padding-left: 0;
 }
 
-ul.react-tabs__tab-list > li.react-tabs__tab{
+ul.react-tabs__tab-list > li.react-tabs__tab {
   background-color: var(--grey);
   border-radius: 0.5rem 0.5rem 0 0;
   padding: 0.5rem;
   text-align: center;
 }
 
-ul.react-tabs__tab-list > li.react-tabs__tab:hover{
+ul.react-tabs__tab-list > li.react-tabs__tab:hover {
   cursor: pointer;
 }
 
-ul.react-tabs__tab-list > li.react-tabs__tab--selected{
+ul.react-tabs__tab-list > li.react-tabs__tab--selected {
   background-color: white;
   border: 1px solid var(--orange);
   border-bottom: none;
@@ -126,4 +124,3 @@ iframe {
   padding: 1rem;
   padding-right: 0;
 }
-
