@@ -1,6 +1,6 @@
-# code-demo
+# cooode-demo
 
-Code-demo is a personal web-based code editor built in react-js with instant demo that tests and showcases HTML and CSS code.
+Cooode-demo is a personal web-based code editor built in react-js with instant demo that tests and showcases HTML and CSS code.
 
   - Type some code snippets
   - HTML & CSS
@@ -25,7 +25,7 @@ Code-demo uses a number of open source projects to work properly:
 Install the dependencies and devDependencies and start the server.
 
 ```sh
-$ cd code-demo
+$ cd cooode-demo
 $ npm install
 $ npm run start
 ```
